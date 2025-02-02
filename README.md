@@ -43,24 +43,28 @@ All three portions of the framework are hookable and pluggable, meaning you can 
   Extend functionality by simply creating new plugins that conform to defined interfaces.
 
 ## Project Structure
-.
- ├── README.md
- ├── go.mod
- ├── go.sum
- ├── main.go
- ├── core
- │ └── interfaces.go # Shared interfaces for plugins
- ├── plugins
- │ ├── reqs
- │ │ ├── adb.go # Example: ADB requirement plugin
- │ │ └── lsusb.go # Example: LSUSB requirement plugin
- │ ├── programs
- │ │ └── sample_program.go # Example: A program plugin
- │ └── processes
- │ ├── shell_command.go # Example: Process plugin for shell commands
- │ └── webhook.go # Example: Process plugin for HTTP requests
- └── tui
-   └── model.go # Bubble Tea TUI model
+
+```bash
+    .
+    ├── README.md
+    ├── go.mod
+    ├── go.sum
+    ├── main.go
+    ├── core
+    │ └── interfaces.go # Shared interfaces for plugins
+    ├── plugins
+    │ ├── reqs
+    │ │ ├── adb.go # Example: ADB requirement plugin
+    │ │ └── lsusb.go # Example: LSUSB requirement plugin
+    │ ├── programs
+    │ │ └── sample_program.go # Example: A program plugin
+    │ └── processes
+    │   ├── shell_command.go # Example: Process plugin for shell commands
+    │   └── webhook.go # Example: Process plugin for HTTP requests
+    └── tui
+      └── model.go # Bubble Tea TUI model
+```
+
 > **Note:** Shared interfaces are defined in the `core` package to avoid circular dependencies and prevent importing from the `main` package.
 ## Installation
 
@@ -228,4 +232,4 @@ Contributions are welcome! Please follow these steps:
 For major changes, please open an issue first to discuss what you would like to change.
 
 ## License
-Distributed under the MIT License. See LICENSE for more information.
+Distributed under the MIT License. See [LICENSE](https://github.com/cxr5009/provisionmanager/LICENSE) for more information.

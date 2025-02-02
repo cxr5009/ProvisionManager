@@ -2,21 +2,33 @@
 package processes
 
 import (
+	"bytes"
 	"fmt"
+	"io"
+	"net/http"
 )
 
 // WebhookProcess implements core.ProcessPlugin to execute a shell command.
 type WebhookProcess struct {
-	Command string
-	Args    []string
+	URL  string
+	Body []byte
 }
 
-func (s *WebhookProcess) Name() string {
-	return "Webhook Command: " + s.Command
+func (w *WebhookProcess) Name() string {
+	return "Webhook Process"
 }
 
-func (s *WebhookProcess) Execute() error {
-	fmt.Printf("Executing: %s %v\n", s.Command, s.Args)
-	// TODO: Implement webhook logic
+func (w *WebhookProcess) Execute() error {
+	resp, err := http.Post(w.URL, "application/json", bytes.NewBuffer(w.Body))
+	if err != nil {
+		return err
+	}
+	defer resp.Body.Close()
+
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return err
+	}
+	fmt.Printf("Webhook Response: %s\n", string(body))
 	return nil
 }
