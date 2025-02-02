@@ -6,7 +6,7 @@ import (
 	"os/exec"
 )
 
-// ADBPlugin implements RequirementPlugin for ADB.
+// ADBPlugin implements core.RequirementPlugin for ADB.
 type ADBPlugin struct{}
 
 func (p *ADBPlugin) Name() string {

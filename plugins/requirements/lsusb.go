@@ -6,7 +6,7 @@ import (
 	"os/exec"
 )
 
-// LSUSBPlugin implements RequirementPlugin for lsusb.
+// LSUSBPlugin implements core.RequirementPlugin for lsusb.
 type LSUSBPlugin struct{}
 
 func (p *LSUSBPlugin) Name() string {

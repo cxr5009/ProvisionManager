@@ -1,4 +1,5 @@
-package main
+// core/interfaces.go
+package core
 
 // --------------------
 // Requirement Plugin Interface

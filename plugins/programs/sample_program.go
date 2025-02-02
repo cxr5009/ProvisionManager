@@ -1,6 +1,7 @@
 package programs
 
 import (
+	"github.com/cxr5009/provisionmanager/core"
 	"github.com/cxr5009/provisionmanager/plugins/processes"
 )
 
@@ -12,8 +13,8 @@ func (sp *SampleProgram) Name() string {
 }
 
 // Processes returns a slice of processes to run.
-func (sp *SampleProgram) Processes() []processes.ProcessPlugin {
-	return []processes.ProcessPlugin{
+func (sp *SampleProgram) Processes() []core.ProcessPlugin {
+	return []core.ProcessPlugin{
 		&processes.ShellCommandProcess{
 			Command: "echo",
 			Args:    []string{"Hello from Sample Program!"},

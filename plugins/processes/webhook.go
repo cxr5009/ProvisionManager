@@ -1,10 +1,11 @@
+// plugins/processes/webhook.go
 package processes
 
 import (
 	"fmt"
 )
 
-// WebhookProcess implements ProcessPlugin to execute a shell command.
+// WebhookProcess implements core.ProcessPlugin to execute a shell command.
 type WebhookProcess struct {
 	Command string
 	Args    []string

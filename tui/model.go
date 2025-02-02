@@ -1,8 +1,9 @@
 package tui
 
 import (
-	"main"
 	"time"
+
+	"github.com/cxr5009/provisionmanager/core"
 
 	tea "github.com/charmbracelet/bubbletea"
 )
@@ -20,9 +21,9 @@ const (
 type Model struct {
 	state           State
 	message         string
-	reqPlugins      []main.RequirementPlugin
-	programPlugins  []main.ProgramPlugin
-	selectedProgram main.ProgramPlugin
+	reqPlugins      []core.RequirementPlugin
+	programPlugins  []core.ProgramPlugin
+	selectedProgram core.ProgramPlugin
 }
 
 // NewModel returns an initial model.

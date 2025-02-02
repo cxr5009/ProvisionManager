@@ -1,3 +1,4 @@
+// plugins/process/shell_command.go
 package processes
 
 import (
@@ -5,7 +6,7 @@ import (
 	"os/exec"
 )
 
-// ShellCommandProcess implements ProcessPlugin to execute a shell command.
+// ShellCommandProcess implements core.ProcessPlugin to execute a shell command.
 type ShellCommandProcess struct {
 	Command string
 	Args    []string
