@@ -1,7 +1,7 @@
 package programs
 
 import (
-	"processes"
+	"github.com/cxr5009/provisionmanager/plugins/processes"
 )
 
 // SampleProgram implements ProgramPlugin.

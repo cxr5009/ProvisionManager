@@ -4,12 +4,12 @@ import (
 	"log"
 
 	tea "github.com/charmbracelet/bubbletea"
-	"github.com/yourusername/yourproject/tui"
+	"github.com/cxr5009/provisionmanager/tui"
 
 	// Import your plugin packages so they register or are available for use.
-	_ "github.com/yourusername/yourproject/plugins/processes"
-	_ "github.com/yourusername/yourproject/plugins/programs"
-	_ "github.com/yourusername/yourproject/plugins/requirements"
+	_ "github.com/cxr5009/provisionmanager/plugins/processes"
+	_ "github.com/cxr5009/provisionmanager/plugins/programs"
+	_ "github.com/cxr5009/provisionmanager/plugins/requirements"
 )
 
 func main() {
